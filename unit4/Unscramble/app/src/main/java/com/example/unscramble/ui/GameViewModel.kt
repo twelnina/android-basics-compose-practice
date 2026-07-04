@@ -66,5 +66,7 @@ class GameViewModel : ViewModel() {
                 )
             }
         }
+
+        updateUserGuess("")
     }
 }
