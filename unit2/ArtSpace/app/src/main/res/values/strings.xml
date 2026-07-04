@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ArtSpace</string>
+    <string name="painting_mona_lisa_title">Mona Lisa</string>
+    <string name="painting_mona_lisa_artist">Leonardo da Vinci</string>
+    <string name="painting_the_starry_night_title">The Starry Night</string>
+    <string name="painting_the_starry_night_artist">Vincent van Gogh</string>
+    <string name="painting_la_nascita_di_venere_title">La nascita di Venere</string>
+    <string name="painting_la_nascita_di_venere_artist">Sandro Botticelli</string>
+    <string name="painting_fugaku_title">富嶽三十六景 神奈川沖浪裏</string>
+    <string name="painting_fugaku_artist">葛飾北斎</string>
+    <string name="painting_las_meninas_title">Las Meninas</string>
+    <string name="painting_las_meninas_artist">Diego Velázquez</string>
+    <string name="painting_meisje_met_de_parel_title">Meisje met de parel</string>
+    <string name="painting_meisje_met_de_parel_artist">Johannes Vermeer</string>
+    <string name="painting_de_nachtwacht_title">De Nachtwacht</string>
+    <string name="painting_de_nachtwacht_artist">Rembrandt van Rijn</string>
+    <string name="painting_skrik_title">Skrik</string>
+    <string name="painting_skrik_artist">Edvard Munch</string>
+    <string name="painting_la_liberte_guidant_le_peuple_title">La Liberté guidant le peuple</string>
+    <string name="painting_la_liberte_guidant_le_peuple_artist">Eugène Delacroix</string>
+    <string name="painting_der_kuss_title">Der Kuss</string>
+    <string name="painting_der_kuss_artist">Gustav Klimt</string>
+    <string name="painting_les_tournesols_title">Les Tournesols</string>
+    <string name="painting_les_tournesols_artist">Vincent van Gogh</string>
+</resources>

@@ -1,0 +1,106 @@
+<resources>
+    <string name="app_name">Travel Wishlist</string>
+
+    <string name="region_asia">Asia</string>
+    <string name="region_europe">Europe</string>
+    <string name="region_north_america">North America</string>
+    <string name="region_south_america">South America</string>
+    <string name="region_africa">Africa</string>
+    <string name="region_oceania">Oceania</string>
+
+<!--    Asia-->
+    <string name="country_01_name">Japan</string>
+    <string name="country_01_description">Japan is an island country with four distinct seasons, offering cherry blossoms, autumn leaves, snowy landscapes, hot springs, and many other seasonal experiences. Travelers can explore urban culture in Tokyo and Osaka, historic temples and shrines in Kyoto and Nara, and natural scenery from Hokkaido to Okinawa. Regional food culture adds even more variety to the trip.</string>
+
+    <string name="country_02_name">South Korea</string>
+    <string name="country_02_description">South Korea blends tradition and modern culture within short travel distances. In Seoul, palaces, markets, modern cafes, and music culture can all fit into one itinerary. Outside the capital, travelers can visit coastal towns, mountain temples, and food destinations shaped by fermented ingredients. It is easy to plan a rich trip even with limited time.</string>
+
+    <string name="country_03_name">China</string>
+    <string name="country_03_description">China has vast landscapes, deep history, and diverse regional cultures. Beijing offers the Great Wall and the Forbidden City, Xian is known for the Terracotta Army, Shanghai shows a modern skyline, and Guilin and Yunnan highlight dramatic scenery. Each region creates a different travel impression, and the variety of local cuisines makes food a major part of the journey.</string>
+
+    <string name="country_04_name">Thailand</string>
+    <string name="country_04_description">Thailand is a popular Southeast Asian destination with temples, street food, and beach resorts. Bangkok offers the Grand Palace and floating markets, Chiang Mai highlights mountain culture and crafts, and the south has clear seas and island escapes. Fragrant cuisine and a relaxed atmosphere make the country memorable for many travelers.</string>
+
+    <string name="country_05_name">Vietnam</string>
+    <string name="country_05_description">Vietnam stretches from north to south, so climate and culture shift by region. Highlights include the Old Quarter of Hanoi, the lanterns of Hoi An, the imperial city of Hue, and the busy streets of Ho Chi Minh City. Food such as pho and banh mi is a major attraction, and the country offers a close view of both nature and everyday life.</string>
+
+    <string name="country_06_name">India</string>
+    <string name="country_06_description">India has layered cultures where religion, language, cuisine, and architecture vary widely by region. The Taj Mahal, the Ganges River, the palaces of Rajasthan, and the temples of South India are among its most memorable destinations. The energy and color of its cities are also part of the experience, and different itineraries can feel like completely different trips.</string>
+
+    <string name="country_07_name">Indonesia</string>
+    <string name="country_07_description">Indonesia is made up of many islands with seas, volcanoes, rainforests, and distinctive local traditions. Bali offers temples, dance, and beach resorts, while Java has historic sites and major cities. Language, cuisine, and religious atmosphere differ from island to island, giving travelers new discoveries across repeated visits.</string>
+
+<!--    Europe-->
+    <string name="country_08_name">Turkey</string>
+    <string name="country_08_description">Turkey sits between Asia and Europe, preserving the marks of centuries of cultural exchange. Istanbul has mosques, bazaars, and layered history, Cappadocia is known for unusual rock formations, and the Aegean coast offers ancient ruins and seaside towns. Food, ceramics, carpets, and architecture all reflect the meeting of cultures.</string>
+
+    <string name="country_09_name">France</string>
+    <string name="country_09_description">France is known for art, cuisine, and historic architecture. Paris offers museums and cafe culture, the Loire Valley has chateaux, Provence features bright rural landscapes, and the Alps and Atlantic coast add natural variety. Food and scenery change by region, making France suitable for both city stays and countryside travel.</string>
+
+    <string name="country_10_name">Italy</string>
+    <string name="country_10_description">Italy is rich in ancient ruins, Renaissance art, and regional food culture. Rome offers history, Florence is known for art, Venice has canals, and Naples and Sicily bring distinctive cuisines and southern character. Walking through its cities naturally leads to piazzas, churches, markets, and layers of everyday history.</string>
+
+    <string name="country_11_name">Spain</string>
+    <string name="country_11_description">Spain is appealing for its lively streets, architecture, food culture, and strong regional traditions. Barcelona has Gaudi architecture, Madrid offers major museums, and Andalusia brings Islamic architecture and flamenco. It is also well suited to a trip built around walking through neighborhoods and enjoying tapas along the way.</string>
+
+    <string name="country_12_name">United Kingdom</string>
+    <string name="country_12_description">The United Kingdom combines royal culture, literature, music, and historic architecture. London offers museums, theaters, and markets, while the countryside includes the Cotswolds, the Lake District, and the dramatic landscapes of Scotland. Traditional pubs and afternoon tea add familiar pleasures to the travel experience.</string>
+
+    <string name="country_13_name">Germany</string>
+    <string name="country_13_description">Germany brings together historic cities, forests, castles, and industrial culture. Berlin highlights modern history and art, Munich offers beer culture and access to the Alps, and the Rhine region features castles and vineyards. Efficient rail travel makes it easy to combine several cities in one itinerary.</string>
+
+    <string name="country_14_name">Greece</string>
+    <string name="country_14_description">Greece is known for ancient ruins and the islands of the Aegean Sea. Athens has the Parthenon, Delphi and Meteora offer historic landscapes, and Santorini and Crete provide seaside towns and island scenery. Olive oil, seafood, and simple regional cooking are also central to the trip.</string>
+
+    <string name="country_15_name">Iceland</string>
+    <string name="country_15_description">Iceland is a country of volcanoes, glaciers, waterfalls, and hot springs. Travelers can use Reykjavik as a base for the Golden Circle or visit the black sand beaches and glacier lagoons of the south coast. Seasonal changes bring different experiences, from midnight sun to northern lights.</string>
+
+    <string name="country_16_name">Norway</string>
+    <string name="country_16_description">Norway is known for fjords, mountains, and Arctic nature. Around Bergen, travelers can see deeply cut coastlines, Oslo offers modern architecture and museums, and the north provides chances to experience northern lights or midnight sun. Traveling by train or boat often makes the scenery the main part of the journey.</string>
+
+<!--    North America-->
+    <string name="country_17_name">United States</string>
+    <string name="country_17_description">The United States offers many travel styles, from major cities and national parks to music, film, and sports culture. New York and Los Angeles provide large urban experiences, while the Grand Canyon, Yosemite, and many other natural areas show dramatic landscapes. Because the country is vast, focused planning usually creates a more satisfying trip.</string>
+
+    <string name="country_18_name">Canada</string>
+    <string name="country_18_description">Canada combines grand nature with multicultural cities. Vancouver offers life between sea and mountains, Toronto has a wide range of food cultures, and Montreal and Quebec City bring a French-speaking atmosphere. The Rockies, lakes, autumn colors, and northern lights add strong seasonal appeal.</string>
+
+    <string name="country_19_name">Mexico</string>
+    <string name="country_19_description">Mexico is rich in ancient ruins, colorful streets, and food culture. Mexico City offers museums and markets, the Yucatan Peninsula combines Maya sites with the Caribbean Sea, and Oaxaca is known for crafts and regional cuisine. Festivals and music add a vivid character to travel across the country.</string>
+
+<!--    South America-->
+    <string name="country_20_name">Brazil</string>
+    <string name="country_20_description">Brazil has vast natural landscapes and energetic urban culture. Rio de Janeiro combines beaches and mountains, the Amazon offers rainforest experiences, Iguazu Falls provides dramatic scenery, and Salvador is known for music and dance. Food and culture vary by region, leaving a strong impression of movement and color.</string>
+
+    <string name="country_21_name">Argentina</string>
+    <string name="country_21_description">Argentina combines big-city culture with powerful natural scenery. Buenos Aires offers tango, cafes, and theater culture, Patagonia has glaciers and mountain landscapes, and Mendoza is a gateway to wine country. Beef dishes and the influence of immigrant cultures give Argentina a distinct atmosphere within South America.</string>
+
+    <string name="country_22_name">Peru</string>
+    <string name="country_22_description">Peru is known for Inca heritage, Andean landscapes, and a respected food culture. Machu Picchu, Cusco, and the Sacred Valley combine history with mountain scenery, while Lima offers highly regarded dining. Large differences in elevation create very different environments across the coast, highlands, and rainforest.</string>
+
+    <string name="country_23_name">Chile</string>
+    <string name="country_23_description">Chile stretches far from north to south, offering landscapes that range from desert to glaciers. The Atacama Desert has salt flats and clear night skies, the central region has wine country, and southern Patagonia features mountains and ice fields. Santiago stands out for its urban setting framed by the Andes.</string>
+
+<!--    Africa-->
+    <string name="country_24_name">Egypt</string>
+    <string name="country_24_description">Egypt is known for ancient ruins and the landscapes of the Nile River. The pyramids of Giza, temples of Luxor, the Valley of the Kings, and river scenery around Aswan offer a strong sense of history. The markets of Cairo and museums are also rewarding, and the contrast between desert and river creates a distinctive travel atmosphere.</string>
+
+    <string name="country_25_name">Morocco</string>
+    <string name="country_25_description">Morocco blends Arab, Berber, and European influences in North Africa. Marrakech and Fez have maze-like old towns, Chefchaouen is known for blue streets, and the Sahara Desert and Atlas Mountains add major landscape variety. Tagine, mint tea, and handmade crafts are important parts of the travel experience.</string>
+
+    <string name="country_26_name">Kenya</string>
+    <string name="country_26_description">Kenya is known for safari travel, wildlife, and broad savanna landscapes. In the Maasai Mara, travelers may see lions, elephants, giraffes, and seasonal wildebeest migration. Urban culture in Nairobi, beaches along the Indian Ocean, and mountain regions create additional travel options beyond safari routes.</string>
+
+    <string name="country_27_name">South Africa</string>
+    <string name="country_27_description">South Africa combines nature, wine, city culture, and history. Cape Town offers Table Mountain, coastlines, and nearby wine regions, while Kruger National Park provides a full safari experience. Music, food, and the history of a multicultural society give travelers many possible themes for a trip.</string>
+
+<!--    Oceania-->
+    <string name="country_28_name">Australia</string>
+    <string name="country_28_description">Australia has continental-scale nature and open, lively cities. Sydney and Melbourne offer urban exploration, the Great Barrier Reef provides marine scenery, Uluru shows the red interior, and Tasmania has wild landscapes. Wildlife and outdoor activities are major attractions, making longer trips especially rewarding.</string>
+
+    <string name="country_29_name">New Zealand</string>
+    <string name="country_29_description">New Zealand is a nature-rich country of mountains, lakes, glaciers, and open pastureland. The North Island has geothermal areas and Maori culture, while the South Island offers Milford Sound, Queenstown, and glacier regions. It is well suited to road trips and hiking, with a calm travel atmosphere.</string>
+
+    <string name="country_30_name">Fiji</string>
+    <string name="country_30_description">Fiji is an island country in the South Pacific with clear seas, white sand beaches, and relaxed island culture. Beyond resort stays, travelers can visit villages, experience traditional ceremonies, snorkel, and explore outer islands. Friendly local hospitality and a slower pace help create a true vacation feeling.</string>
+</resources>
