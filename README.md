@@ -8,18 +8,18 @@ The projects are organized by course unit. Each directory is an independent Andr
 
 | Unit | Project | Focus |
 | --- | --- | --- |
-| Unit 1 | `unit1/ComposeArticle` | Basic Compose layouts, text, and images |
-| Unit 1 | `unit1/BusinessCard` | Business card app UI |
-| Unit 2 | `unit2/DiceRoller` | Button interactions, state, and image updates |
-| Unit 2 | `unit2/Lemonade` | State changes based on user interaction |
-| Unit 2 | `unit2/TipCalculator` | Text input, calculation logic, and UI tests |
-| Unit 2 | `unit2/ArtSpace` | Switching content within a screen |
-| Unit 3 | `unit3/Affirmations` | Data lists, `LazyColumn`, and image cards |
-| Unit 3 | `unit3/Courses` | Grid layouts, data classes, and resources |
-| Unit 3 | `unit3/Woof` | Material Theme, custom fonts, and animation |
-| Unit 3 | `unit3/Superheroes` | Material 3, theming, and accessibility |
-| Unit 3 | `unit3/TravelWishlist` | A 30 Days App practice project |
-| Unit 4 | `unit4/Unscramble` | ViewModel, UI state, and app state management |
+| Unit 1 | [`unit1/ComposeArticle`](unit1/ComposeArticle) | Basic Compose layouts, text, and images |
+| Unit 1 | [`unit1/BusinessCard`](unit1/BusinessCard) | Business card app UI |
+| Unit 2 | [`unit2/DiceRoller`](unit2/DiceRoller) | Button interactions, state, and image updates |
+| Unit 2 | [`unit2/Lemonade`](unit2/Lemonade) | State changes based on user interaction |
+| Unit 2 | [`unit2/TipCalculator`](unit2/TipCalculator) | Text input, calculation logic, and UI tests |
+| Unit 2 | [`unit2/ArtSpace`](unit2/ArtSpace) | Switching content within a screen |
+| Unit 3 | [`unit3/Affirmations`](unit3/Affirmations) | Data lists, `LazyColumn`, and image cards |
+| Unit 3 | [`unit3/Courses`](unit3/Courses) | Grid layouts, data classes, and resources |
+| Unit 3 | [`unit3/Woof`](unit3/Woof) | Material Theme, custom fonts, and animation |
+| Unit 3 | [`unit3/Superheroes`](unit3/Superheroes) | Material 3, theming, and accessibility |
+| Unit 3 | [`unit3/TravelWishlist`](unit3/TravelWishlist) | A 30 Days App practice project |
+| Unit 4 | [`unit4/Unscramble`](unit4/Unscramble) | ViewModel, UI state, and app state management |
 
 ## Tech Stack
 
