@@ -1,4 +1,4 @@
-name: Unit Test
+name: Unscramble GameViewModelTest
 
 on:
   push:
