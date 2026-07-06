@@ -7,6 +7,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: unit4/Unscramble
     steps:
       - name: Checkout
         uses: actions/checkout@v4
