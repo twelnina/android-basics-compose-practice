@@ -1,29 +1,27 @@
-name: Build
+name: Unit Test
 
 on:
-  pull_request:
-    branches:
-      - main
-      - starter
+  push:
+  workflow_dispatch:
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Set Up JDK
         uses: actions/setup-java@v4
         with:
-          distribution: 'zulu' # See 'Supported distributions' for available options
-          java-version: '17'
-          cache: 'gradle'
+          distribution: temurin # See 'Supported distributions' for available options
+          java-version: 17
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
         
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-        
-      - name: Build project 
-        run: ./gradlew :app:assembleDebug
+      - name: Run GameViewModelTest
+        run: ./gradlew :app:testDebugUnitTest --tests "com.example.unscramble.ui.test.GameViewModelTest"
