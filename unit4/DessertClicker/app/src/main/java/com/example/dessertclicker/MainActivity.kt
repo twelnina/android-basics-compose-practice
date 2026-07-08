@@ -28,14 +28,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.WindowInsets
-import androidx.compose.foundation.layout.asPaddingValues
-import androidx.compose.foundation.layout.calculateEndPadding
-import androidx.compose.foundation.layout.calculateStartPadding
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Share
@@ -53,12 +48,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.core.content.ContextCompat
-import com.example.dessertclicker.data.Datasource
-import com.example.dessertclicker.model.Dessert
 import com.example.dessertclicker.ui.DessertClickerScreen
 import com.example.dessertclicker.ui.theme.DessertClickerTheme
 
@@ -78,7 +70,7 @@ class MainActivity : ComponentActivity() {
                         .fillMaxSize()
                         .statusBarsPadding(),
                 ) {
-                    DessertClickerApp(desserts = Datasource.dessertList)
+                    DessertClickerApp()
                 }
             }
         }
@@ -116,37 +108,13 @@ class MainActivity : ComponentActivity() {
 }
 
 /**
- * Determine which dessert to show.
- */
-fun determineDessertToShow(
-    desserts: List<Dessert>,
-    dessertsSold: Int
-): Dessert {
-    var dessertToShow = desserts.first()
-    for (dessert in desserts) {
-        if (dessertsSold >= dessert.startProductionAmount) {
-            dessertToShow = dessert
-        } else {
-            // The list of desserts is sorted by startProductionAmount. As you sell more desserts,
-            // you'll start producing more expensive desserts as determined by startProductionAmount
-            // We know to break as soon as we see a dessert who's "startProductionAmount" is greater
-            // than the amount sold.
-            break
-        }
-    }
-
-    return dessertToShow
-}
-
-/**
  * Share desserts sold information using ACTION_SEND intent
  */
 private fun shareSoldDessertsInformation(intentContext: Context, dessertsSold: Int, revenue: Int) {
     val sendIntent = Intent().apply {
         action = Intent.ACTION_SEND
         putExtra(
-            Intent.EXTRA_TEXT,
-            intentContext.getString(R.string.share_text, dessertsSold, revenue)
+            Intent.EXTRA_TEXT, intentContext.getString(R.string.share_text, dessertsSold, revenue)
         )
         type = "text/plain"
     }
@@ -165,9 +133,7 @@ private fun shareSoldDessertsInformation(intentContext: Context, dessertsSold: I
 }
 
 @Composable
-private fun DessertClickerApp(
-    desserts: List<Dessert>
-) {
+private fun DessertClickerApp() {
 
     var revenue by rememberSaveable { mutableStateOf(0) }
     var dessertsSold by rememberSaveable { mutableStateOf(0) }
@@ -176,7 +142,6 @@ private fun DessertClickerApp(
     Scaffold(
         topBar = {
             val intentContext = LocalContext.current
-            val layoutDirection = LocalLayoutDirection.current
             DessertClickerAppBar(
                 onShareButtonClicked = {
                     shareSoldDessertsInformation(
@@ -187,16 +152,9 @@ private fun DessertClickerApp(
                 },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(
-                        start = WindowInsets.safeDrawing.asPaddingValues()
-                            .calculateStartPadding(layoutDirection),
-                        end = WindowInsets.safeDrawing.asPaddingValues()
-                            .calculateEndPadding(layoutDirection),
-                    )
                     .background(MaterialTheme.colorScheme.primary)
             )
-        }
-    ) { innerPadding ->
+        }) { innerPadding ->
         DessertClickerScreen(
             modifier = Modifier.padding(innerPadding)
         )
@@ -205,8 +163,7 @@ private fun DessertClickerApp(
 
 @Composable
 private fun DessertClickerAppBar(
-    onShareButtonClicked: () -> Unit,
-    modifier: Modifier = Modifier
+    onShareButtonClicked: () -> Unit, modifier: Modifier = Modifier
 ) {
     Row(
         modifier = modifier,

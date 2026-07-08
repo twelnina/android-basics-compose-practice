@@ -39,8 +39,8 @@ fun DessertClickerScreen(
     DessertClickerLayout(
         revenue = dessertUiState.revenue,
         dessertSold = dessertUiState.dessertSold,
-        onDessertClicked = {},
-        dessertImageId = dessertUiState.currentDessertImageId,
+        onDessertClicked = { dessertViewModel.onDessertClicked() },
+        dessertImageId = dessertUiState.dessertToShow.imageId,
         modifier = modifier
     )
 }
@@ -148,7 +148,7 @@ private fun RevenueInfo(revenue: Int, modifier: Modifier = Modifier) {
 @Preview
 @Composable
 fun DessertClickerScreenPreview() {
-    DessertClickerTheme {
+    DessertClickerTheme(darkTheme = true) {
         DessertClickerLayout(
             revenue = 0, dessertSold = 0, onDessertClicked = {}, dessertImageId = R.drawable.cupcake
         )
