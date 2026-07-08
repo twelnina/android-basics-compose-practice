@@ -17,30 +17,25 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.dessertclicker.R
 
 @Composable
 fun DessertClickerAppBar(
-    dessertViewModel: DessertViewModel = viewModel()
+    revenue: Int, dessertSold: Int
 ) {
-    val dessertUiState by dessertViewModel.uiState.collectAsState()
     val intentContext = LocalContext.current
     DessertClickerAppBarLayout(
         onShareButtonClicked = {
-            shareSoldDessertsInformation(
-                intentContext = intentContext,
-                dessertsSold = dessertUiState.dessertSold,
-                revenue = dessertUiState.revenue
+            onShareButtonClicked(
+                intentContext = intentContext, revenue = revenue, dessertSold = dessertSold
             )
-        }, modifier = Modifier
+        },
+        modifier = Modifier
             .fillMaxWidth()
             .background(MaterialTheme.colorScheme.primary)
             .statusBarsPadding()
@@ -48,7 +43,7 @@ fun DessertClickerAppBar(
 }
 
 @Composable
-fun DessertClickerAppBarLayout(
+private fun DessertClickerAppBarLayout(
     onShareButtonClicked: () -> Unit, modifier: Modifier = Modifier
 ) {
     Row(
@@ -75,7 +70,16 @@ fun DessertClickerAppBarLayout(
     }
 }
 
-fun shareSoldDessertsInformation(
+
+private fun onShareButtonClicked(
+    intentContext: Context, revenue: Int, dessertSold: Int
+) {
+    shareSoldDessertsInformation(
+        intentContext = intentContext, revenue = revenue, dessertsSold = dessertSold
+    )
+}
+
+private fun shareSoldDessertsInformation(
     intentContext: Context, dessertsSold: Int, revenue: Int
 ) {
     val sendIntent = Intent().apply {
@@ -98,5 +102,4 @@ fun shareSoldDessertsInformation(
             Toast.LENGTH_LONG
         ).show()
     }
-
 }

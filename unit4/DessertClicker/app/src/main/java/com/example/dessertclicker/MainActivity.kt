@@ -26,9 +26,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.dessertclicker.ui.DessertClickerAppBar
 import com.example.dessertclicker.ui.DessertClickerScreen
+import com.example.dessertclicker.ui.DessertViewModel
 import com.example.dessertclicker.ui.theme.DessertClickerTheme
 
 // Tag for logging
@@ -84,13 +88,25 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-private fun DessertClickerApp() {
+private fun DessertClickerApp(
+    dessertViewModel: DessertViewModel = viewModel()
+) {
+    val dessertUiState by dessertViewModel.uiState.collectAsState()
     Scaffold(
         topBar = {
-            DessertClickerAppBar()
+            DessertClickerAppBar(
+                revenue = dessertUiState.revenue,
+                dessertSold = dessertUiState.dessertSold
+            )
         }) { innerPadding ->
         DessertClickerScreen(
-            modifier = Modifier.padding(innerPadding)
+            revenue = dessertUiState.revenue,
+            dessertSold = dessertUiState.dessertSold,
+            onDessertClicked = { dessertViewModel.onDessertClicked() },
+            dessertImageId = dessertUiState.dessertToShow.imageId,
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
         )
     }
 }

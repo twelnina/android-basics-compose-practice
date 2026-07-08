@@ -19,17 +19,14 @@ class DessertViewModel : ViewModel() {
                 dessertSold = newDessertSold,
 
                 dessertToShow = determineDessertToShow(
-                    desserts = Datasource.dessertList,
-                    dessertsSold = newDessertSold
-                ),
-                revenue = currentState.revenue + currentState.dessertToShow.price
+                    desserts = Datasource.dessertList, dessertsSold = newDessertSold
+                ), revenue = currentState.revenue + currentState.dessertToShow.price
             )
         }
     }
 
-    fun determineDessertToShow(
-        desserts: List<Dessert>,
-        dessertsSold: Int
+    private fun determineDessertToShow(
+        desserts: List<Dessert>, dessertsSold: Int
     ): Dessert {
         var dessertsToShow = desserts.first()
         for (dessert in desserts) {
