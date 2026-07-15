@@ -23,7 +23,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.dimensionResource
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -66,45 +68,79 @@ fun LunchTrayApp() {
         ) {
             composable(route = LunchTrayScreen.Start.name) {
                 StartOrderScreen(
-                    onStartOrderButtonClicked = {},
-                    modifier = Modifier.fillMaxSize()
+                    onStartOrderButtonClicked = {
+                        navController.navigate(LunchTrayScreen.EntreeMenu.name)
+                    },
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(dimensionResource(R.dimen.padding_medium))
                 )
             }
             composable(route = LunchTrayScreen.EntreeMenu.name) {
                 EntreeMenuScreen(
                     options = DataSource.entreeMenuItems,
-                    onCancelButtonClicked = {},
-                    onNextButtonClicked = {},
+                    onCancelButtonClicked = {
+                        cancelOrderAndNavigateToStart(viewModel, navController)
+                    },
+                    onNextButtonClicked = {
+                        navController.navigate(LunchTrayScreen.SideDishMenu.name)
+                    },
                     onSelectionChanged = {},
-                    modifier = Modifier.fillMaxSize()
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(dimensionResource(R.dimen.padding_medium))
                 )
             }
             composable(route = LunchTrayScreen.SideDishMenu.name) {
                 SideDishMenuScreen(
                     options = DataSource.sideDishMenuItems,
-                    onCancelButtonClicked = {},
-                    onNextButtonClicked = {},
+                    onCancelButtonClicked = {
+                        cancelOrderAndNavigateToStart(viewModel, navController)
+                    },
+                    onNextButtonClicked = {
+                        navController.navigate(LunchTrayScreen.AccompanimentMenu.name)
+                    },
                     onSelectionChanged = {},
-                    modifier = Modifier.fillMaxSize()
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(dimensionResource(R.dimen.padding_medium))
                 )
             }
             composable(route = LunchTrayScreen.AccompanimentMenu.name) {
                 AccompanimentMenuScreen(
                     options = DataSource.accompanimentMenuItems,
-                    onCancelButtonClicked = {},
-                    onNextButtonClicked = {},
+                    onCancelButtonClicked = {
+                        cancelOrderAndNavigateToStart(viewModel, navController)
+                    },
+                    onNextButtonClicked = {
+                        navController.navigate(LunchTrayScreen.Checkout.name)
+                    },
                     onSelectionChanged = {},
-                    modifier = Modifier.fillMaxSize()
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(dimensionResource(R.dimen.padding_medium))
                 )
             }
             composable(route = LunchTrayScreen.Checkout.name) {
                 CheckoutScreen(
                     orderUiState = uiState,
                     onNextButtonClicked = {},
-                    onCancelButtonClicked = {},
-                    modifier = Modifier.fillMaxSize()
+                    onCancelButtonClicked = {
+                        cancelOrderAndNavigateToStart(viewModel, navController)
+                    },
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(dimensionResource(R.dimen.padding_medium))
                 )
             }
         }
     }
+}
+
+fun cancelOrderAndNavigateToStart(
+    viewModel: OrderViewModel,
+    navController: NavHostController
+) {
+    viewModel.resetOrder()
+    navController.popBackStack(LunchTrayScreen.Start.name, false)
 }
