@@ -24,7 +24,6 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.lunchtray.R
 import com.example.lunchtray.datasource.DataSource
-import com.example.lunchtray.model.MenuItem
 import com.example.lunchtray.model.MenuItem.AccompanimentItem
 
 @Composable
@@ -39,7 +38,7 @@ fun AccompanimentMenuScreen(
         options = options,
         onCancelButtonClicked = onCancelButtonClicked,
         onNextButtonClicked = onNextButtonClicked,
-        onSelectionChanged = onSelectionChanged as (MenuItem) -> Unit,
+        onSelectionChanged = onSelectionChanged,
         modifier = modifier
     )
 }
